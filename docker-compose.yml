@@ -1,9 +1,19 @@
-app:
+ipcatcher:
   restart: always
-  build: ./app
+  build: ./ipcatcher/
   expose:
     - "8080"
   volumes:
     - ./app:/usr/src/app
     - ./data:/data
-  command: /usr/local/bin/gunicorn -w 2 -b :8080
+  command: /usr/local/bin/gunicorn -w 2 -b :8080 ipcatcher:app
+
+nginx:
+  restart: always
+  build: ./nginx/
+  ports:
+    - "80:80"
+  volumes_from:
+    - ipcatcher
+  links:
+    - ipcatcher:ipcatcher
