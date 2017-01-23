@@ -1,6 +1,7 @@
 # IDE stuff
 app/.idea/
 .vagrant/
+*.db
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
