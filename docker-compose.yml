@@ -4,7 +4,7 @@ ipcatcher:
   expose:
     - "8080"
   volumes:
-    - ./app:/usr/src/app
+    - ./ipcatcher:/usr/src/app
     - ./data:/data
   command: /usr/local/bin/gunicorn -w 2 -b 127.0.0.1:8000 ipcatcher:app
 
