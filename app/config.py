@@ -1,5 +1,5 @@
 DEBUG = True
-SQLALCHEMY_DATABASE_URI = 'sqllite://dev.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:////dev.db'
 
 try:
     from local_config import *
