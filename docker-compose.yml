@@ -6,7 +6,7 @@ ipcatcher:
   volumes:
     - ./app:/usr/src/app
     - ./data:/data
-  command: /usr/local/bin/gunicorn -w 2 -b :8080 ipcatcher:app
+  command: /usr/local/bin/gunicorn -w 2 -b 127.0.0.1:8000 ipcatcher:app
 
 nginx:
   restart: always
