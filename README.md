@@ -13,6 +13,8 @@ Pull the repo
 Optionally, create a local_config.py inside ipcatcher to modify the default settings (note: this is recommended. put a db in /data, etc)
 
 # ROADMAP
+Update Vagrantfile to install docker-engine and compose on provision
+
 Move away from sqlite to postgres
 
 Create postgres container and share a volume between services
