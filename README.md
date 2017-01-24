@@ -13,6 +13,14 @@ Pull the repo
 Optionally, create a local_config.py inside ipcatcher to modify the default settings (note: this is recommended. put a db in /data, etc)
 
 # ROADMAP
+Rename production.py to create_db.py
+
+Update Dockerfile for ipcatcher to run create_db.py on build
+
+Update project to reflect status as a series of small web apps (i.e., rename repo to wreck.haus)
+
+Extract out nginx in a way that more apps can be added easily (such as secretsanta)
+
 Update Vagrantfile to install docker-engine and compose on provision
 
 Move away from sqlite to postgres
