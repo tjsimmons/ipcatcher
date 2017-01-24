@@ -2,7 +2,9 @@
 A dumb webservice that uses a pre-shared key to authenticate users, and capture their IP address
 
 # HOW TO INSTALL
-Pull the repo
+`git pull https://github.com/tjsimmons/ipcatcher.git`
+
+`cd ipcatcher`
 
 `docker-compose build`
 
@@ -13,18 +15,14 @@ Pull the repo
 Optionally, create a local_config.py inside ipcatcher to modify the default settings (note: this is recommended. put a db in /data, etc)
 
 # ROADMAP
-Rename production.py to create_db.py
+1. Update project to reflect status as a series of small web apps (i.e., rename repo to wreck.haus)
 
-Update Dockerfile for ipcatcher to run create_db.py on build
+1. Extract out nginx in a way that more apps can be added easily (such as secretsanta)
 
-Update project to reflect status as a series of small web apps (i.e., rename repo to wreck.haus)
+1. Update Vagrantfile to install docker-engine and compose on provision
 
-Extract out nginx in a way that more apps can be added easily (such as secretsanta)
+1. Move away from sqlite to postgres
 
-Update Vagrantfile to install docker-engine and compose on provision
+1. Create postgres container and share a volume between services
 
-Move away from sqlite to postgres
-
-Create postgres container and share a volume between services
-
-Create a master project that abstracts out nginx, because this will eventually house more apps/services
+1. Create a master project that abstracts out nginx, because this will eventually house more apps/services
