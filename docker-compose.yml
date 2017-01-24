@@ -5,7 +5,7 @@ services:
     restart: always
     build: ./ipcatcher/
     expose:
-      - "8080"
+      - "8000"
     volumes:
       - ./ipcatcher:/usr/src/app
       - ./data:/data

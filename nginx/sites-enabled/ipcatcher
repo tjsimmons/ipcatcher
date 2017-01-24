@@ -4,10 +4,6 @@ server {
     server_name wreck.haus;
     charset utf-8;
 
-    location /static {
-        alias /usr/src/app/static;
-    }
-
     location /services/ipcatcher {
         proxy_pass http://ipcatcher:8000;
         proxy_set_header Host $host;
