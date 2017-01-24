@@ -1,5 +1,5 @@
 DEBUG = False
-SQLALCHEMY_DATABASE_URI = 'sqlite:////data/ipcatcher.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///dev.db'
 
 try:
     from local_config import *
