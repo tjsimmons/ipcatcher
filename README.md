@@ -4,7 +4,7 @@ A dumb webservice that uses a pre-shared key to authenticate users, and capture 
 # HOW TO INSTALL
 `git pull https://github.com/tjsimmons/ipcatcher.git`
 
-`cd ipcatcher`
+`cd wreck.haus`
 
 `docker-compose build`
 
