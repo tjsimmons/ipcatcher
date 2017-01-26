@@ -4,6 +4,7 @@ ipcatcher/.idea/
 *.db
 *.DS_Store*
 *local_config.py
+production.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
