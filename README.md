@@ -11,9 +11,8 @@ A dumb webservice that uses a pre-shared key to authenticate users, and capture 
 `docker-compose up -d`
 
 # ROADMAP
-1. Figure out docker-compose logging and multiple Compose files
+1. Move from flask to Django. Flask feels weird, and I know Django.
 
-1. Move away from sqlite to postgres
-  1. Create postgres container and share a volume between services
+1. Figure out docker-compose logging and multiple Compose files
 
 1. Create a master project that abstracts out nginx, because this will eventually house more apps/services
