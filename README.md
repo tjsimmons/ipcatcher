@@ -2,7 +2,7 @@
 A dumb webservice that uses a pre-shared key to authenticate users, and capture their IP address
 
 # HOW TO INSTALL
-`git pull https://github.com/tjsimmons/ipcatcher.git`
+`git pull https://github.com/tjsimmons/wreck.haus.git`
 
 `cd wreck.haus`
 
