@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'tlqncwg@_yk8_g)35o%cmk(4)9g%bz545p%+_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['ipcatcher.tjsimmons.net']
+ALLOWED_HOSTS = ['ipcatcher.tjsimmons.net', '127.0.0.1']
 
 
 # Application definition
