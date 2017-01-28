@@ -2,16 +2,16 @@
 A dumb webservice that uses a pre-shared key to authenticate users, and capture their IP address
 
 # HOW TO INSTALL
-`git pull https://github.com/tjsimmons/wreck.haus.git`
+`git pull https://github.com/tjsimmons/ipcatcher.git`
 
-`cd wreck.haus`
+`cd ipcatcher`
 
 `docker-compose build`
 
 `docker-compose up -d`
 
 # ROADMAP
-1. Move from flask to Django. Flask feels weird, and I know Django.
+1. Set up staticfile serving with nginx (use collectstatic)
 
 1. Figure out docker-compose logging and multiple Compose files
 
