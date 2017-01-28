@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'tlqncwg@_yk8_g)35o%cmk(4)9g%bz545p%+_pm662toc377mh')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True) is True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 print(DEBUG)
 
-ALLOWED_HOSTS = ['services.tjsimmons.net']
+ALLOWED_HOSTS = ['ipcatcher.tjsimmons.net']
 
 
 # Application definition

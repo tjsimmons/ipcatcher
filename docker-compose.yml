@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  ipcatcher:
+  services:
     restart: always
-    build: ./ipcatcher/
+    build: ./services/
     expose:
       - "8000"
     links:
@@ -17,7 +17,7 @@ services:
     ports:
       - "80:80"
     links:
-      - ipcatcher:ipcatcher
+      - services:ipcatcher
 
   postgres:
     restart: always
