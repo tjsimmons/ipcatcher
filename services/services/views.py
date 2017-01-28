@@ -7,11 +7,11 @@ from .models import Home
 
 
 # Create your views here.
-@require_POST
 @csrf_exempt
 def index(request):
     key = request.POST.get('key', None)
-
+    print(key)
+    print('hey')
     if key is None:
         return HttpResponseBadRequest()
 
