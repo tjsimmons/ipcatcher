@@ -24,7 +24,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'tlqncwg@_yk8_g)35o%cmk(4)9g%bz545p%+_
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
-print(DEBUG)
 
 ALLOWED_HOSTS = ['ipcatcher.tjsimmons.net']
 
@@ -131,3 +130,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

@@ -6,6 +6,8 @@ services:
     build: ./services/
     expose:
       - "8000"
+    volumes:
+      - static:/usr/src/app/static
     links:
       - postgres:postgres
     env_file: .env
@@ -16,6 +18,8 @@ services:
     build: ./nginx/
     ports:
       - "80:80"
+    volumes:
+      - static:/var/www/nginx/static
     links:
       - services:ipcatcher
 
@@ -29,3 +33,4 @@ services:
 
 volumes:
   pgdata:
+  static:
