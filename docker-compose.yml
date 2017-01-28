@@ -6,10 +6,10 @@ services:
     build: ./ipcatcher/
     expose:
       - "8000"
-    volumes:
-      #- ./ipcatcher:/usr/src/app
-      - ./data:/data
-    command: /usr/local/bin/gunicorn -w 2 -b :8000 wsgi:app
+    links:
+      - postgres:postgres
+    env_file: .env
+    command: /usr/local/bin/gunicorn -w 2 -b :8000 ipcatcher.wsgi
 
   nginx:
     restart: always
