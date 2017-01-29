@@ -10,7 +10,7 @@ services:
     links:
       - postgres:postgres
     env_file: .env
-    command: /usr/local/bin/gunicorn -w 2 -b :8000 ipcatcher.wsgi
+    command: ./run.sh
 
   nginx:
     build: ./nginx/
