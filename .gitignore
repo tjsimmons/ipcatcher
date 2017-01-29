@@ -1,4 +1,5 @@
 # IDE stuff
+prod.env
 services/.idea/
 .vagrant/
 *.db

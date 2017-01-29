@@ -80,7 +80,7 @@ if not DEBUG:
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': os.environ.get('DB_NAME'),
             'USER': os.environ.get('DB_USER'),
-            'PASSWORD': os.environ.get('DB_PASS'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
             'HOST': os.environ.get('DB_HOST'),
             'PORT': os.environ.get('DB_PORT'),
         }
@@ -93,6 +93,8 @@ else:
         }
     }
 
+print('DEBUG: {0}'.format(DEBUG))
+print('PASSWORD: {0}'.format(os.environ.get('POSTGRES_PASSWORD')))
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 

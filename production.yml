@@ -1,2 +1,37 @@
-env_file:
-  - production.env
+version: "3"
+
+services:
+  services:
+    restart: always
+    build: ./services/
+    expose:
+      - "8000"
+    volumes:
+      - static:/usr/src/app/static
+    links:
+      - postgres:postgres
+    env_file: prod.env
+    command: /usr/local/bin/gunicorn -w 2 -b :8000 ipcatcher.wsgi
+
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - static:/var/www/nginx/static
+    links:
+      - services:ipcatcher
+
+  postgres:
+    restart: always
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+    env_file: prod.env
+
+volumes:
+  pgdata:
+  static:
